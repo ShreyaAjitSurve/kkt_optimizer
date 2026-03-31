@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKT Optimizer | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center overflow-hidden">
+
+    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-600/20 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-purple-600/20 rounded-full blur-[120px]"></div>
+
+    <div class="relative z-10 text-center px-6">
+        <div class="floating mb-8 inline-block">
+            <div class="w-28 h-28 bg-gradient-to-tr from-[#4d4dff] to-[#7c3aed] rounded-[32px] flex items-center justify-center shadow-2xl shadow-blue-500/20">
+                <span class="text-6xl font-black text-white">λ</span>
+            </div>
+        </div>
+
+        <h1 class="text-6xl md:text-7xl font-black text-white mb-6 tracking-tight">
+            KKT <span class="text-[#4d4dff]">Optimizer</span>
+        </h1>
+        
+        <p class="text-slate-400 text-xl md:text-2xl max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
+            A specialized tool for solving Non-Linear Programming Problems using the Karush-Kuhn-Tucker method with automated case analysis.
+        </p>
+
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+            <a href="/input" class="group relative px-10 py-5 bg-[#4d4dff] text-white rounded-2xl text-2xl font-extrabold hover:bg-[#3b3bff] transition-all duration-300 hover:scale-105 shadow-xl shadow-blue-500/25">
+                Get Started
+                <span class="inline-block ml-2 group-hover:translate-x-2 transition-transform">→</span>
+            </a>
+            
+            <div class="glass-card px-8 py-5 rounded-2xl flex items-center gap-4">
+                <div class="flex -space-x-2">
+                    <div class="w-8 h-8 rounded-full bg-slate-700 border-2 border-slate-900 flex items-center justify-center text-[10px] font-bold">x₁</div>
+                    <div class="w-8 h-8 rounded-full bg-slate-600 border-2 border-slate-900 flex items-center justify-center text-[10px] font-bold">x₂</div>
+                    <div class="w-8 h-8 rounded-full bg-slate-500 border-2 border-slate-900 flex items-center justify-center text-[10px] font-bold">λ</div>
+                </div>
+                <span class="text-slate-400 font-semibold uppercase tracking-widest text-xs">Symbolic Solver Ready</span>
+            </div>
+        </div>
+
+        <div class="mt-20 flex flex-wrap justify-center gap-4 opacity-50">
+            <span class="border border-slate-700 px-4 py-2 rounded-full text-xs font-bold text-slate-400 uppercase tracking-widest">Inequality Constraints</span>
+            <span class="border border-slate-700 px-4 py-2 rounded-full text-xs font-bold text-slate-400 uppercase tracking-widest">Lagrangian Multipliers</span>
+            <span class="border border-slate-700 px-4 py-2 rounded-full text-xs font-bold text-slate-400 uppercase tracking-widest">Stationarity Logic</span>
+        </div>
+    </div>
+
+    <div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+</body>
+</html>
